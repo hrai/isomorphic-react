@@ -2,7 +2,7 @@ import React from 'react';
 import QuestionList from './components/QuestionList'
 import QuestionDetail from './components/QuestionDetail'
 import { connect } from 'react-redux';
-import NotificationViewer from './components/NotificationViewer'
+import NotificationsViewer from './components/NotificationsViewer'
 
 import {
     Route,
@@ -21,7 +21,7 @@ const AppDisplay =  ()=>(
             </Link>
         </div>
         <div>
-            <NotificationViewer />
+            <NotificationsViewer />
         </div>
 
         {/*Specify a route for the main page which renders when the path is empty*/}
