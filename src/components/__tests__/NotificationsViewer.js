@@ -23,4 +23,11 @@ describe("The notification viewer", async () => {
         const text = component.children[0];
         expect(text).toEqual('5 notifications');
     });
+    
+    it("Should have a passing snapshot", async ()=>{
+        const tree = renderer.create(<NotificationsViewer/>);
+        expect(tree).toMatchSnapshot();
+        await delay();
+        expect(tree).toMatchSnapshot();
+    });
 });
