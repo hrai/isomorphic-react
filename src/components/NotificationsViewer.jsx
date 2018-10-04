@@ -11,9 +11,8 @@ export default class extends React.Component {
 
     async componentDidMount() {
         let { count } = await NotificationsService.getNotifications();
-        console.log(count);
         this.setState({
-            count
+            count,
         });
     }
 
@@ -21,7 +20,9 @@ export default class extends React.Component {
         return (
             <section className="mt-3 mb-2">
                 <div className="notifications">
-                    {this.state.count != -1 ? this.state.count : `Loading...`}
+                    {this.state.count != -1 ?
+                     `${this.state.count} notifications` :
+                     `Loading...`}
                 </div>
             </section>
         )

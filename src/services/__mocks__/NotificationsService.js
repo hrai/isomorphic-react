@@ -3,7 +3,7 @@ export default {
     __setCount(_count) {
         count = _count;
     },
-    async GetNotifications() {
+    async getNotifications() {
         console.warn("Using mock svc");
         return { count };
     }
